@@ -14,3 +14,25 @@ venv/
 
 # Project specific
 *.log
+
+# ... (konten yang sudah ada) ...
+
+# --- Ollama & Model Files ---
+# Abaikan semua file yang berhubungan dengan Ollama
+.ollama/
+ollama_models/
+*.bin
+*.gguf
+
+# --- Build & Library Files ---
+# Abaikan file build dan library yang dikompilasi
+build/
+*.so
+*.dll
+*.dylib
+
+# --- System & Cache ---
+# Abaikan file sistem dan cache
+.DS_Store
+Thumbs.db
+*.log
