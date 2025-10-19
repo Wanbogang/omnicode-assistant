@@ -31,7 +31,6 @@ class ModelManager:
         except Exception as e:
             return f"[red]An error occurred: {e}[/red]"
             return f"[red]An error occurred: {e}[/red]"
-
     def _generate_with_openai(self, prompt: str, language: str):
         try:
             response = self.openai_client.chat.completions.create(
