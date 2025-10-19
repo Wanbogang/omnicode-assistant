@@ -49,7 +49,7 @@ class ModelManager:
     def refactor_code_with_ast(self, ast_json_string: str, use_local: bool = False):
         """
         Sending AST representation to AI for refactoring.
-        Secara default akan menggunakan model cloud yang paling kuat.
+        By default will use the most powerful cloud model.
         """
         prompt = f"""
 You are an expert Python developer. Your task is to refactor Python code based on a simplified JSON representation of its Abstract Syntax Tree (AST).
