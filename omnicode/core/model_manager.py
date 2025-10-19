@@ -48,7 +48,7 @@ class ModelManager:
 
     def refactor_code_with_ast(self, ast_json_string: str, use_local: bool = False):
         """
-        Mengirim representasi AST ke AI untuk di-refactor.
+        Sending AST representation to AI for refactoring.
         Secara default akan menggunakan model cloud yang paling kuat.
         """
         prompt = f"""
@@ -79,7 +79,7 @@ Based on the JSON above, provide the complete, refactored Python code. Do not in
                         {"role": "system", "content": "You are an expert Python assistant that outputs only valid code."},
                         {"role": "user", "content": prompt}
                     ],
-                    temperature=0.2, # Sedikit lebih rendah untuk hasil yang lebih deterministik
+                    temperature=0.2, # Slightly lower for more deterministic results
                 )
                 return response.choices[0].message.content
             except Exception as e:

@@ -1,4 +1,4 @@
-# File contoh yang perlu di-refactor
+# Sample file that needs to be refactored
 def calculate(a, b, c):
     x = a + b
     y = x * c

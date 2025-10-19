@@ -15,23 +15,23 @@ def refactor_command(file_path: str, apply: bool):
     """
     console.print(f"[bold yellow]Refactoring file:[/bold yellow] {file_path}")
     
-    # Langkah 1: Parsing kode ke AST
+    # Step 1: Parse code to AST
     ast_object = parse_file_to_ast(file_path)
     
     if isinstance(ast_object, str): # Jika ada error parsing
         console.print(ast_object)
         return
 
-    # Langkah 2: Konversi AST ke JSON
+    # Step 2: Convert AST to JSON
     ast_json = ast_to_json(ast_object)
     
     console.print("[green]✅ Parsed code to AST. Sending to AI...[/green]")
     
-    # Langkah 3: Kirim ke AI untuk di-refactor
+    # Step 3: Send to AI for refactoring
     manager = ModelManager()
     refactored_code = manager.refactor_code_with_ast(ast_json)
     
-    # Langkah 4: Tampilkan hasil
+    # Step 4: Display results
     console.print("\n--- Refactored Code ---\n")
     if refactored_code.startswith("[red]"):
         console.print(refactored_code)

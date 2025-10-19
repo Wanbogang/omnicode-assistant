@@ -23,7 +23,7 @@ def _extract_function_info(node):
         "body": []
     }
     for child in node.body:
-        # Hanya ambil representasi string dari node tubuh untuk kesederhanaan
+        # Only take string representation of body node for simplicity
         info["body"].append(ast.unparse(child))
     return info
 
