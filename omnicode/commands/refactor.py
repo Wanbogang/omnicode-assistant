@@ -18,7 +18,7 @@ def refactor_command(file_path: str, apply: bool):
     # Step 1: Parse code to AST
     ast_object = parse_file_to_ast(file_path)
     
-    if isinstance(ast_object, str): # Jika ada error parsing
+    if isinstance(ast_object, str): # If there is a parsing error
         console.print(ast_object)
         return
 

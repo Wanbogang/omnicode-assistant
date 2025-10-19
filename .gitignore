@@ -7,32 +7,28 @@ __pycache__/
 venv/
 .env/
 .venv/
+*.egg-info/
 
 # IDE
 .vscode/
 .idea/
 
-# Project specific
-*.log
-
-# ... (konten yang sudah ada) ...
-
-# --- Ollama & Model Files ---
-# Abaikan semua file yang berhubungan dengan Ollama
+# Ollama & Model Files
 .ollama/
 ollama_models/
 *.bin
 *.gguf
 
-# --- Build & Library Files ---
-# Abaikan file build dan library yang dikompilasi
+# Build & Library Files
 build/
 *.so
 *.dll
 *.dylib
 
-# --- System & Cache ---
-# Abaikan file sistem dan cache
+# System & Cache
 .DS_Store
 Thumbs.db
 *.log
+
+# Project Specific
+temp_fix.py

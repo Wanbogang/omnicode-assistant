@@ -2,7 +2,7 @@ import ast
 import json
 
 def parse_file_to_ast(file_path: str):
-    """Membaca file Python dan mengembalikan representasi AST-nya."""
+    """Read Python file and return its AST representation."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             code_string = f.read()
@@ -15,7 +15,7 @@ def parse_file_to_ast(file_path: str):
         return f"[red]Error reading file: {e}[/red]"
 
 def _extract_function_info(node):
-    """Mengekstrak informasi dari sebuah node FunctionDef."""
+    """Extract information from a FunctionDef node."""
     info = {
         "type": "function",
         "name": node.name,
@@ -28,7 +28,7 @@ def _extract_function_info(node):
     return info
 
 def ast_to_json(ast_object):
-    """Mengubah AST menjadi string JSON yang sederhana dan terstruktur."""
+    """Convert AST to simple and structured JSON string."""
     if isinstance(ast_object, str):
         return json.dumps({"error": ast_object})
     
@@ -41,7 +41,7 @@ def ast_to_json(ast_object):
     return json.dumps(summary, indent=2)
 
 def pretty_print_ast(ast_object):
-    """Mencetak AST dengan format yang rapi."""
+    """Print AST with neat formatting."""
     if isinstance(ast_object, str):
         return ast_object
     return ast_to_json(ast_object)

@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "omnicode-assistant"
 version = "0.1.0"
 description = "A modular, multi-model AI assistant for developers."
-authors = [{name = "Your Name", email = "your.email@example.com"}]
+authors = [{name = "Wanbogang", email = "wanbogang@example.com"}]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.9"

@@ -74,7 +74,7 @@ Based on the JSON above, provide the complete, refactored Python code. Do not in
             self.console.print("[green]Using the most powerful cloud model for best results.[/green]")
             try:
                 response = self.openai_client.chat.completions.create(
-                    model=self.config.CLOUD_MODEL_COMPLEX, # Menggunakan gpt-4o
+                    model=self.config.CLOUD_MODEL_COMPLEX, # Using gpt-4o
                     messages=[
                         {"role": "system", "content": "You are an expert Python assistant that outputs only valid code."},
                         {"role": "user", "content": prompt}
